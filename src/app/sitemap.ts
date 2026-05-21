@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
+
 import fs from "fs";
 import path from "path";
 
 import { getBlogs } from "@/features/articles/actions/query";
 import { SERVICES } from "@/features/services/constant";
-import { root } from "@/lib/root-mdx";
 import {
+	getIndustrySitemapLastModified,
 	INDUSTRY_SITEMAP,
 	INDUSTRY_SLUGS,
-	getIndustrySitemapLastModified,
 } from "@/lib/industry-seo";
 import {
 	getLocationSitemapLastModified,
@@ -18,6 +18,7 @@ import {
 	SERVICE_SLUGS,
 	serviceLocationPath,
 } from "@/lib/location-seo";
+import { root } from "@/lib/root-mdx";
 import { getBaseUrl } from "@/lib/seo";
 
 function fileMtime(filePath: string): Date | null {

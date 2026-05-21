@@ -13,7 +13,10 @@ export interface FeedbackItem {
 	authorRole: string;
 }
 
-const FEEDBACK_TEMPLATE: Omit<FeedbackItem, "image1" | "image2" | "gradientImage" | "authorImage"> = {
+const FEEDBACK_TEMPLATE: Omit<
+	FeedbackItem,
+	"image1" | "image2" | "gradientImage" | "authorImage"
+> = {
 	quote1:
 		"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
 	author1: "Arjun",
@@ -33,4 +36,7 @@ function createFeedbackItem(): FeedbackItem {
 	};
 }
 
-export const FEEDBACK_ITEMS: FeedbackItem[] = Array.from({ length: 5 }, createFeedbackItem);
+export const FEEDBACK_ITEMS: FeedbackItem[] = Array.from(
+	{ length: 5 },
+	createFeedbackItem
+);

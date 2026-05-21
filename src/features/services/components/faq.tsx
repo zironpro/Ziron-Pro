@@ -77,8 +77,7 @@ async function Faq({
 		}
 	});
 
-	const structuredData =
-		faqItems.length > 0 ? buildFaqSchema(faqItems) : null;
+	const structuredData = faqItems.length > 0 ? buildFaqSchema(faqItems) : null;
 	const faqSchemaId =
 		faqItems.length > 0
 			? `faq-structured-data-${slugify(faqItems[0].question)}-${faqItems.length}`

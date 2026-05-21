@@ -1,5 +1,8 @@
 import { getBlogs } from "@/features/articles/actions/query";
-import type { RelatedBlog, RelatedService } from "@/features/articles/actions/types";
+import type {
+	RelatedBlog,
+	RelatedService,
+} from "@/features/articles/actions/types";
 import { SERVICES } from "@/features/services/constant";
 
 const BLOG_SLUG_PATTERN = /^\/blogs\/([^/]+)$/;

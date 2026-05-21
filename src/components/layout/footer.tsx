@@ -1,4 +1,4 @@
-import { SiteImage } from "@/components/shared/site-image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Logo, LogoMono } from "@/assets/logo";

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { Route } from "next";
-import { SiteImage } from "@/components/shared/site-image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { AnimatePresence, domAnimation, LazyMotion, m } from "motion/react";

@@ -552,7 +552,6 @@ function MarkerPopup({
 			.setDOMContent(container);
 
 		return popupInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: Marker instance and event handler references are intentionally stable and not included in dependencies due to MapLibreGL's imperative setup and non-serializable references. Marker lifecycle is managed manually.
@@ -633,9 +632,9 @@ function MarkerTooltip({
 		}).setMaxWidth("none");
 
 		return tooltipInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: no need to re-render when map changes
 	useEffect(() => {
 		if (!map) return;
 
@@ -654,7 +653,6 @@ function MarkerTooltip({
 			marker.getElement()?.removeEventListener("mouseleave", handleMouseLeave);
 			tooltip.remove();
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map]);
 
 	if (tooltip.isOpen()) {
@@ -955,6 +953,7 @@ function MapPopup({
 	onCloseRef.current = onClose;
 	const container = useMemo(() => document.createElement("div"), []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: no need to memoize
 	const popup = useMemo(() => {
 		const popupInstance = new MapLibreGL.Popup({
 			offset: 16,
@@ -965,9 +964,9 @@ function MapPopup({
 			.setLngLat([longitude, latitude]);
 
 		return popupInstance;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: nno need to re-render when map changes
 	useEffect(() => {
 		if (!map) return;
 
@@ -984,7 +983,6 @@ function MapPopup({
 				popup.remove();
 			}
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map]);
 
 	if (popup.isOpen()) {
@@ -1076,6 +1074,7 @@ function MapRoute({
 	const layerId = `route-layer-${id}`;
 
 	// Add source and layer on mount
+	// biome-ignore lint/correctness/useExhaustiveDependencies: no need to re-render when map changes and dependencies are not serializable
 	useEffect(() => {
 		if (!isLoaded || !map) return;
 
@@ -1109,7 +1108,6 @@ function MapRoute({
 				// ignore
 			}
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isLoaded, map]);
 
 	// When coordinates change, update the source data

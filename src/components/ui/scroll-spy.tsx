@@ -48,7 +48,7 @@ export function Scrollspy({
 			}
 			prevIdTracker.current = sectionId;
 		},
-		[anchorElementsRef, dataAttribute, history, onUpdate]
+		[dataAttribute, history, onUpdate]
 	);
 
 	const handleScroll = useCallback(() => {
@@ -113,7 +113,7 @@ export function Scrollspy({
 			activeAnchor?.getAttribute(`data-${dataAttribute}-anchor`) || null;
 
 		setActiveSection(sectionId);
-	}, [anchorElementsRef, targetRef, dataAttribute, offset, setActiveSection]);
+	}, [targetRef, dataAttribute, offset, setActiveSection]);
 
 	const scrollTo = useCallback(
 		(anchorElement: HTMLElement) => (event?: Event) => {
@@ -221,14 +221,7 @@ export function Scrollspy({
 			});
 			clearTimeout(initialTimeout);
 		};
-	}, [
-		targetRef,
-		selfRef,
-		handleScroll,
-		dataAttribute,
-		scrollTo,
-		scrollToHashSection,
-	]);
+	}, [targetRef, handleScroll, dataAttribute, scrollTo, scrollToHashSection]);
 
 	return (
 		<div className={className} data-slot="scrollspy" ref={selfRef}>

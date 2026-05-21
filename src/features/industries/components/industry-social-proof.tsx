@@ -12,7 +12,7 @@ export function IndustrySocialProof({ data }: IndustrySocialProofProps) {
 			<div className="dashed dashed-x container mx-auto max-w-7xl">
 				<div className="flex flex-col items-center gap-4 px-6 py-12 text-center md:px-0">
 					{data.stat && (
-						<p className="font-display font-bold text-3xl text-brand-600 tracking-tight md:text-4xl">
+						<p className="font-bold font-display text-3xl text-brand-600 tracking-tight md:text-4xl">
 							{data.stat}
 						</p>
 					)}

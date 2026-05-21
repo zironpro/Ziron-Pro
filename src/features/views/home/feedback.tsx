@@ -1,6 +1,6 @@
 "use client";
 
-import { SiteImage } from "@/components/shared/site-image";
+import Image from "next/image";
 
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";

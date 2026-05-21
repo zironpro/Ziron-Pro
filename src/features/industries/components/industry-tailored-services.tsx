@@ -1,7 +1,8 @@
-import Link from "next/link";
 import type { Route } from "next";
+import Link from "next/link";
 
 import { Header } from "@/components/shared/header";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -9,7 +10,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 

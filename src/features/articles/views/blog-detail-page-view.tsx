@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 import MDXContent from "@/components/markdown/mdx-component";
 import { blogMdxComponents } from "@/components/markdown/mdx-components";
 import { Noise } from "@/components/shared/noise";
-import { SiteImage } from "@/components/shared/site-image";
 import { Badge } from "@/components/ui/badge";
 import { ScrollIndicator } from "@/components/ui/scroll-indicator";
 
@@ -45,7 +46,7 @@ export function BlogDetailPageView({
 						{blog.metadata.description}
 					</p>
 					<div className="relative mx-auto mt-9 aspect-video max-w-4xl overflow-hidden rounded-xl shadow-md">
-						<SiteImage
+						<Image
 							alt={blog.metadata.title}
 							className="object-cover"
 							fill

@@ -142,7 +142,7 @@ const ServicesStickyCards = () => {
 				return (
 					<StickyCard
 						i={i}
-						key={`p_${i + 1}`}
+						key={`p_${service.title}-${Number(i) + 1}`}
 						progress={scrollYProgress}
 						range={[i * 0.2, 1]}
 						service={service}

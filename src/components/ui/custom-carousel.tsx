@@ -125,7 +125,7 @@ function MotionCarousel(props: PropType) {
 						return (
 							<motion.div
 								className="mr-(--slide-spacing) flex h-(--slide-height) min-w-0 flex-none basis-(--slide-size)"
-								key={`Slide ${index + 1}`}
+								key={`Slide ${Number(index) + 1}`}
 							>
 								<motion.div
 									animate={{
@@ -147,7 +147,7 @@ function MotionCarousel(props: PropType) {
 				<div className="flex flex-wrap items-center justify-end gap-2 rounded-full bg-surface/80 p-1">
 					{scrollSnaps.map((_, index) => (
 						<DotButton
-							key={`Slide ${index + 1}`}
+							key={`Slide ${Number(index) + 1}`}
 							label={`Slide ${index + 1}`}
 							onClick={() => onDotClick(index)}
 							selected={index === selectedIndex}

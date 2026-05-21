@@ -1,4 +1,4 @@
-import { SiteImage } from "@/components/shared/site-image";
+import Image from "next/image";
 
 import { Header } from "@/components/shared/header";
 import {

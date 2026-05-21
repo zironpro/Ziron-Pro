@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 
-import { SiteImage } from "@/components/shared/site-image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -117,7 +117,7 @@ export function OurWorksPageView() {
 
 							<FramePanel>
 								<div className="relative aspect-video w-full overflow-hidden rounded-xl">
-									<SiteImage
+									<Image
 										alt="Direct Logic Systems website project by Ziron pro in Dubai"
 										className="object-cover"
 										fill

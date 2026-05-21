@@ -1,6 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
-import { SiteImage } from "@/components/shared/site-image";
 
 import { Card } from "@/features/services/components/card";
 import { Faq, FaqContent } from "@/features/services/components/faq";
@@ -13,12 +12,9 @@ import { Group, Section } from "@/features/services/components/section";
 import { Cta } from "@/features/views/cta";
 import { cn } from "@/lib/utils";
 
-function MdxImage({
-	className,
-	...props
-}: React.ComponentProps<typeof SiteImage>) {
+function MdxImage({ className, ...props }: React.ComponentProps<typeof Image>) {
 	return (
-		<SiteImage
+		<Image
 			{...props}
 			className={cn(
 				"rounded-2xl transition-transform hover:-translate-y-2",

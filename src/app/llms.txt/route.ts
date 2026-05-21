@@ -152,7 +152,8 @@ function buildLlmsText(baseUrl: string): string {
 		asLinkLine(baseUrl, {
 			label: "Our Works",
 			href: "/our-works",
-			description: "Portfolio examples and case highlights from completed client projects.",
+			description:
+				"Portfolio examples and case highlights from completed client projects.",
 		}),
 		asLinkLine(baseUrl, {
 			label: "Blogs",
@@ -193,7 +194,8 @@ function buildLlmsText(baseUrl: string): string {
 		asLinkLine(baseUrl, {
 			label: "Terms of Service",
 			href: "/terms-of-service",
-			description: "Legal terms that govern the use of this website and services.",
+			description:
+				"Legal terms that govern the use of this website and services.",
 		}),
 		asLinkLine(baseUrl, {
 			label: "llms.txt",

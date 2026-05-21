@@ -123,22 +123,22 @@ export default function Integrations() {
 		<div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
 			<Marquee className="-delay-[200ms] [--duration:18s]" repeat={6} reverse>
 				{randomTiles1.map((review, i) => (
-					<Card key={`item-${i + 1}`} {...review} />
+					<Card key={`item-${Number(i) + 1}`} {...review} />
 				))}
 			</Marquee>
 			<Marquee className="[--duration:25s]" repeat={6} reverse>
 				{randomTiles2.map((review, i) => (
-					<Card key={`item-${i + 1}`} {...review} />
+					<Card key={`item-${Number(i) + 1}`} {...review} />
 				))}
 			</Marquee>
 			<Marquee className="-delay-[300ms] [--duration:20s]" repeat={6} reverse>
 				{randomTiles1.map((review, i) => (
-					<Card key={`item-${i + 1}`} {...review} />
+					<Card key={`item-${Number(i) + 1}`} {...review} />
 				))}
 			</Marquee>
 			<Marquee className="[--duration:30s]" repeat={6} reverse>
 				{randomTiles2.map((review, i) => (
-					<Card key={`item-${i + 1}`} {...review} />
+					<Card key={`item-${Number(i) + 1}`} {...review} />
 				))}
 			</Marquee>
 		</div>

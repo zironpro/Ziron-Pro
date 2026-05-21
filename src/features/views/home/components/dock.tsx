@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRef } from "react";
 
-import { SiteImage } from "@/components/shared/site-image";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 

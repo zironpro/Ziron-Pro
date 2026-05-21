@@ -64,7 +64,6 @@
 }
 
 @utility squircle {
-	/* biome-ignore lint/correctness/noUnknownProperty: its a valid css property */
 	corner-shape: squircle;
 }
 

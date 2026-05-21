@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Noise } from "@/components/shared/noise";
-import { SiteImage } from "@/components/shared/site-image";
 
 import { cn } from "@/lib/utils";
 
@@ -34,7 +34,7 @@ export const BlogCard = ({
 			/>
 			<div className={cn("relative aspect-16/10 overflow-hidden rounded-2xl")}>
 				<Noise />
-				<SiteImage
+				<Image
 					alt={`${blog.title} blog cover by Ziron pro`}
 					className="object-cover transition-[scale] group-hover/blog:scale-105"
 					fill

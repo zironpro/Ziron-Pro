@@ -1,13 +1,13 @@
-import Link from "next/link";
 import type { Route } from "next";
+import Link from "next/link";
 
 import { Header } from "@/components/shared/header";
 
 import {
-	INDUSTRY_SLUGS,
-	type IndustrySlug,
 	formatIndustryTitle,
 	getIndustryContent,
+	INDUSTRY_SLUGS,
+	type IndustrySlug,
 } from "@/lib/industry-seo";
 
 import { IndustryIcon } from "./industry-icon";
