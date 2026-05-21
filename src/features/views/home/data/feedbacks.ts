@@ -1,3 +1,5 @@
+import { MEDIA } from "@/data/media";
+
 export interface FeedbackItem {
 	image1: string;
 	image2: string;
@@ -11,71 +13,24 @@ export interface FeedbackItem {
 	authorRole: string;
 }
 
-export const FEEDBACK_ITEMS: FeedbackItem[] = [
-	{
-		image1: "/images/feedback/maxline-1.webp",
-		image2: "/images/feedback/maxline-2.webp",
-		gradientImage: "/images/gradient.jpg",
-		quote1:
-			"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
-		author1: "Arjun",
-		quote2: "We’ll love to work with you",
-		author2: "Ziron pro",
-		authorImage: "/images/feedback/maxline-1.webp", // Placeholder, will update later if needed
-		authorName: "Arjun Unnikrishnan",
-		authorRole: "It Support in Maxline Global",
-	},
-	{
-		image1: "/images/feedback/maxline-1.webp",
-		image2: "/images/feedback/maxline-2.webp",
-		gradientImage: "/images/gradient.jpg",
-		quote1:
-			"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
-		author1: "Arjun",
-		quote2: "We’ll love to work with you",
-		author2: "Ziron pro",
-		authorImage: "/images/feedback/maxline-1.webp", // Placeholder, will update later if needed
-		authorName: "Arjun Unnikrishnan",
-		authorRole: "It Support in Maxline Global",
-	},
-	{
-		image1: "/images/feedback/maxline-1.webp",
-		image2: "/images/feedback/maxline-2.webp",
-		gradientImage: "/images/gradient.jpg",
-		quote1:
-			"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
-		author1: "Arjun",
-		quote2: "We’ll love to work with you",
-		author2: "Ziron pro",
-		authorImage: "/images/feedback/maxline-1.webp", // Placeholder, will update later if needed
-		authorName: "Arjun Unnikrishnan",
-		authorRole: "It Support in Maxline Global",
-	},
-	{
-		image1: "/images/feedback/maxline-1.webp",
-		image2: "/images/feedback/maxline-2.webp",
-		gradientImage: "/images/gradient.jpg",
-		quote1:
-			"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
-		author1: "Arjun",
-		quote2: "We’ll love to work with you",
-		author2: "Ziron pro",
-		authorImage: "/images/feedback/maxline-1.webp", // Placeholder, will update later if needed
-		authorName: "Arjun Unnikrishnan",
-		authorRole: "It Support in Maxline Global",
-	},
-	{
-		image1: "/images/feedback/maxline-1.webp",
-		image2: "/images/feedback/maxline-2.webp",
-		gradientImage: "/images/gradient.jpg",
-		quote1:
-			"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
-		author1: "Arjun",
-		quote2: "We’ll love to work with you",
-		author2: "Ziron pro",
-		authorImage: "/images/feedback/maxline-1.webp", // Placeholder, will update later if needed
-		authorName: "Arjun Unnikrishnan",
-		authorRole: "It Support in Maxline Global",
-	},
-	// Add more feedback items here in the future
-];
+const FEEDBACK_TEMPLATE: Omit<FeedbackItem, "image1" | "image2" | "gradientImage" | "authorImage"> = {
+	quote1:
+		"Ziron pro has completely transformed our social media presence! Their striking posters and engaging motion reels have noticeably boosted our reach and engagement.",
+	author1: "Arjun",
+	quote2: "We'll love to work with you",
+	author2: "Ziron pro",
+	authorName: "Arjun Unnikrishnan",
+	authorRole: "It Support in Maxline Global",
+};
+
+function createFeedbackItem(): FeedbackItem {
+	return {
+		...FEEDBACK_TEMPLATE,
+		image1: MEDIA.feedback.maxline1,
+		image2: MEDIA.feedback.maxline2,
+		gradientImage: MEDIA.bg.gradient,
+		authorImage: MEDIA.feedback.maxline1,
+	};
+}
+
+export const FEEDBACK_ITEMS: FeedbackItem[] = Array.from({ length: 5 }, createFeedbackItem);

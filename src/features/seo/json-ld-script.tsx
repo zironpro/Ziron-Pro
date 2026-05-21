@@ -1,8 +1,10 @@
 import Script from "next/script";
 
+import type { Graph, Thing, WithContext } from "schema-dts";
+
 type JsonLdScriptProps = {
 	id: string;
-	data: unknown;
+	data: WithContext<Thing> | Graph;
 };
 
 export function JsonLdScript({ id, data }: JsonLdScriptProps) {

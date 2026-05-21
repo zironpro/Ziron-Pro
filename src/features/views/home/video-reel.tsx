@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/shared/site-image";
 
 import { Noise } from "@/components/shared/noise";
 import { Button } from "@/components/ui/button";

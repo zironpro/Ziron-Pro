@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/shared/site-image";
 
 import { PARTNERS } from "@/components/layout/data/constants";
 import { ContactList } from "@/components/layout/ui/contact-list";

@@ -13,6 +13,7 @@ import { Frame, FramePanel } from "@/components/ui/frame";
 import { IconCalender } from "@/assets/icons/calender";
 
 import { JsonLdScript } from "@/features/seo/json-ld-script";
+import { buildFaqSchema } from "@/lib/seo";
 import { slugify } from "@/lib/slugify";
 import { cn } from "@/lib/utils";
 
@@ -76,22 +77,8 @@ async function Faq({
 		}
 	});
 
-	// Generate FAQPage structured data
 	const structuredData =
-		faqItems.length > 0
-			? {
-					"@context": "https://schema.org",
-					"@type": "FAQPage",
-					mainEntity: faqItems.map((item) => ({
-						"@type": "Question",
-						name: item.question,
-						acceptedAnswer: {
-							"@type": "Answer",
-							text: item.answer,
-						},
-					})),
-				}
-			: null;
+		faqItems.length > 0 ? buildFaqSchema(faqItems) : null;
 	const faqSchemaId =
 		faqItems.length > 0
 			? `faq-structured-data-${slugify(faqItems[0].question)}-${faqItems.length}`

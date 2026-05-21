@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
 
+import type {
+	AggregateRating,
+	Article,
+	BreadcrumbList,
+	FAQPage,
+	ItemList,
+	LocalBusiness,
+	Organization,
+	Review,
+	Service,
+	WebPage,
+	WebSite,
+	WithContext,
+} from "schema-dts";
+
 import { ADDRESS } from "@/data/constant";
 import { siteConfig } from "@/data/site-config";
 
@@ -87,8 +102,8 @@ type ServiceSchemaParams = {
 	image?: string;
 	serviceType?: string;
 	areaServed?: string;
-	review?: Record<string, unknown>;
-	aggregateRating?: Record<string, unknown>;
+	review?: Review;
+	aggregateRating?: AggregateRating;
 };
 
 type ReviewSchemaParams = {
@@ -223,7 +238,7 @@ export function makeNationalServiceTitle(service: string): string {
 	return `${service} in UAE | ${siteConfig.shortName}`;
 }
 
-export function buildOrganizationSchema(): Record<string, unknown> {
+export function buildOrganizationSchema(): WithContext<Organization> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Organization",
@@ -247,7 +262,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
 	};
 }
 
-export function buildWebsiteSchema(): Record<string, unknown> {
+export function buildWebsiteSchema(): WithContext<WebSite> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
@@ -257,12 +272,12 @@ export function buildWebsiteSchema(): Record<string, unknown> {
 		potentialAction: {
 			"@type": "SearchAction",
 			target: `${getBaseUrl()}/blogs?query={search_term_string}`,
-			"query-input": "required name=search_term_string",
+			query: "{search_term_string}",
 		},
 	};
 }
 
-export function buildLocalBusinessSchema(): Record<string, unknown> {
+export function buildLocalBusinessSchema(): WithContext<LocalBusiness> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
@@ -287,11 +302,26 @@ export function buildLocalBusinessSchema(): Record<string, unknown> {
 	};
 }
 
+export function buildAreaLocalBusinessSchema(
+	areaServed: string,
+	path: string,
+	options?: { serviceType?: string }
+): WithContext<LocalBusiness> {
+	return {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		name: siteConfig.shortName,
+		url: absoluteUrl(path),
+		areaServed,
+		...(options?.serviceType ? { serviceType: options.serviceType } : {}),
+	};
+}
+
 export function buildWebPageSchema(
 	title: string,
 	description: string,
 	path: string
-): Record<string, unknown> {
+): WithContext<WebPage> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebPage",
@@ -309,7 +339,7 @@ export function buildWebPageSchema(
 
 export function buildBreadcrumbSchema(
 	items: BreadcrumbItem[]
-): Record<string, unknown> {
+): WithContext<BreadcrumbList> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "BreadcrumbList",
@@ -331,7 +361,7 @@ export function buildServiceSchema({
 	areaServed = "United Arab Emirates",
 	review,
 	aggregateRating,
-}: ServiceSchemaParams): Record<string, unknown> {
+}: ServiceSchemaParams): WithContext<Service> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Service",
@@ -362,7 +392,7 @@ export function buildArticleSchema({
 	image,
 	datePublished,
 	authorName,
-}: ArticleSchemaParams): Record<string, unknown> {
+}: ArticleSchemaParams): WithContext<Article> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Article",
@@ -393,7 +423,7 @@ export function buildArticleSchema({
 
 export function buildFaqSchema(
 	items: Array<{ question: string; answer: string }>
-): Record<string, unknown> {
+): WithContext<FAQPage> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "FAQPage",
@@ -414,7 +444,7 @@ export function buildReviewSchema({
 	reviewRatingValue,
 	itemName,
 	itemPath,
-}: ReviewSchemaParams): Record<string, unknown> {
+}: ReviewSchemaParams): WithContext<Review> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Review",
@@ -441,7 +471,7 @@ export function buildAggregateRatingSchema(
 	itemPath: string,
 	ratingValue: number,
 	ratingCount: number
-): Record<string, unknown> {
+): WithContext<AggregateRating> {
 	return {
 		"@context": "https://schema.org",
 		"@type": "AggregateRating",
@@ -452,5 +482,25 @@ export function buildAggregateRatingSchema(
 		},
 		ratingValue,
 		ratingCount,
+	};
+}
+
+export function buildItemListSchema(
+	items: Array<{ name: string; path: string }>,
+	options?: { name?: string; numberOfItems?: number }
+): WithContext<ItemList> {
+	return {
+		"@context": "https://schema.org",
+		"@type": "ItemList",
+		...(options?.name ? { name: options.name } : {}),
+		...(options?.numberOfItems !== undefined
+			? { numberOfItems: options.numberOfItems }
+			: {}),
+		itemListElement: items.map((item, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			name: item.name,
+			url: absoluteUrl(item.path),
+		})),
 	};
 }

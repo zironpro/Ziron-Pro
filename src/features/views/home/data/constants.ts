@@ -1,4 +1,5 @@
 import { IconCheckmark } from "@/assets/icons/check";
+import { MEDIA } from "@/data/media";
 
 import {
 	BrandServed,
@@ -37,99 +38,55 @@ export const FEATURED_ITEMS = [
 		id: 1,
 		title: "Digital Marketing",
 		alt: "Digital Marketing for your goals.",
-		image: "/images/featured/marketing.webp",
+		image: MEDIA.featured.marketing,
 		icon: IconCheckmark,
 	},
 	{
 		id: 2,
 		title: "Branding",
 		alt: "Logo Design for your Brand's Identity.",
-		image: "/images/featured/logo-design.webp",
+		image: MEDIA.featured.logoDesign,
 		icon: IconCheckmark,
 	},
 	{
 		id: 3,
 		title: "Website UI/UX Design",
 		alt: "UI/UX Design for your website.",
-		image: "/images/featured/ui-ux-design.webp",
+		image: MEDIA.featured.uiUx,
 		icon: IconCheckmark,
 	},
 	{
 		id: 4,
 		title: "Web Development",
 		alt: "Website Development.",
-		image: "/images/featured/web-dev.webp",
+		image: MEDIA.featured.webDev,
 		icon: IconCheckmark,
 	},
 	{
 		id: 5,
 		title: "SEO & Content Marketing",
 		alt: "SEO & Content Marketing for your website.",
-		image: "/images/featured/seo.webp",
+		image: MEDIA.featured.seo,
 		icon: IconCheckmark,
 	},
 	{
 		id: 6,
 		title: "Motion Graphics",
 		alt: "Motion Graphics for your brand.",
-		image: "/images/featured/motion-graphics.webp",
+		image: MEDIA.featured.motionGraphics,
 		icon: IconCheckmark,
 	},
-	// {
-	// 	id: 7,
-	// 	title: "Digital Marketing",
-	// 	alt: "Digital Marketing for your goals.",
-	// 	image: "/images/direct.jpg",
-	// 	icon: IconCheckmark,
-	// },
-	// {
-	// 	id: 8,
-	// 	title: "Digital Marketing",
-	// 	alt: "Digital Marketing for your goals.",
-	// 	image: "/images/direct.jpg",
-	// 	icon: IconCheckmark,
-	// },
 ];
 
 export const CLIENTS = [
-	{
-		src: "/images/clients/maxline.png",
-		name: "Maxline Global Logistics",
-	},
-	{
-		src: "/images/clients/piptan.png",
-		name: "Piptan Investments",
-	},
-	{
-		src: "/images/clients/100-power.png",
-		name: "100 Power",
-	},
-	{
-		src: "/images/clients/qordz.svg",
-		name: "Qordz",
-	},
-	{
-		src: "/images/clients/direct-ls.svg",
-		name: "Direct Logic Systems",
-	},
-	{
-		src: "/images/clients/sphere-it.svg",
-		name: "Sphere IT Global",
-	},
-	{
-		src: "/images/clients/mc.svg",
-		name: "MC-Bauchemie",
-	},
-	{
-		src: "/images/clients/simply-kf.png",
-		name: "Simply KF",
-	},
-	{
-		src: "/images/clients/smart-kitchen.png",
-		name: "Smart Kitchen",
-	},
-	{
-		src: "/images/clients/m2mtek.png",
-		name: "M2MTek",
-	},
+	{ src: MEDIA.clients.maxline, name: "Maxline Global Logistics" },
+	{ src: MEDIA.clients.piptan, name: "Piptan Investments" },
+	{ src: MEDIA.clients.hundredPower, name: "100 Power" },
+	{ src: MEDIA.clients.qordzSvg, name: "Qordz" },
+	{ src: MEDIA.clients.directLs, name: "Direct Logic Systems" },
+	{ src: MEDIA.clients.sphereIt, name: "Sphere IT Global" },
+	{ src: MEDIA.clients.mc, name: "MC-Bauchemie" },
+	{ src: MEDIA.clients.simplyKf, name: "Simply KF" },
+	{ src: MEDIA.clients.smartKitchen, name: "Smart Kitchen" },
+	{ src: MEDIA.clients.m2mtek, name: "M2MTek" },
 ] as const;

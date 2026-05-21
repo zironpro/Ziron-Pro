@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage } from "@/components/shared/site-image";
 
 import {
 	Carousel,

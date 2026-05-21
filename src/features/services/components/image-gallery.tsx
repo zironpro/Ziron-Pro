@@ -1,4 +1,4 @@
-export const ImageGalley = ({
+export const ImageGallery = ({
 	children,
 	description,
 	title,
@@ -20,3 +20,6 @@ export const ImageGalley = ({
 		</section>
 	);
 };
+
+/** @deprecated Use ImageGallery */
+export const ImageGalley = ImageGallery;
