@@ -16,9 +16,8 @@ export const Achievements = () => {
 	return (
 		<section className="dashed dashed-y">
 			<Header
-				description="Curious about what we've accomplished? Let our track record speak for
-					itself."
-				title="Our Achievements"
+				description="600% organic traffic growth, 5X lead growth via paid ads, and complete digital transformations. Our results speak for themselves."
+				title="Case Study Highlights"
 			/>
 			{/* <header className="dashed dashed-t-0 mx-auto max-w-7xl p-6 text-center md:p-14">
 				<h2 className="font-display font-semibold text-4xl text-primary tracking-tight md:text-6xl">
@@ -52,7 +51,7 @@ export const Achievements = () => {
 				<div className="dashed dashed-x container mx-auto max-w-7xl">
 					<div className="group flex flex-col gap-4 py-12 md:grid md:grid-cols-5">
 						<h2 className="shrink-0 text-balance font-medium text-muted-foreground">
-							Trusted by fast-growing companies around the world
+							Trusted by fast-growing brands across Abu Dhabi, Dubai, and the UAE
 						</h2>
 						<div className="mask-[linear-gradient(to_right,transparent_0%,black_4%,black_96%,transparent_100%)] md:col-span-4">
 							<Marquee className="[--duration:25s] [--gap:3.5rem]">

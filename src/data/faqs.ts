@@ -176,4 +176,54 @@ export const FAQS: FaqCategory[] = [
 			},
 		],
 	},
+	{
+		slug: "general",
+		title: "General Questions",
+		description:
+			"Common questions about ZironPro's digital marketing services in Abu Dhabi & Dubai.",
+		items: [
+			{
+				question:
+					"What makes you a reliable digital marketing agency that Abu Dhabi & Dubai small business owners trust?",
+				answer:
+					"We combine affordability, transparency, and performance, ensuring small businesses get measurable ROI without overspending. Every campaign is built around real results — lead generation, revenue growth, and long-term brand authority.",
+			},
+			{
+				question: "Do you offer SEO services in Dubai affordable for startups?",
+				answer:
+					"Yes. Our SEO plans are designed specifically for startups and SMEs looking for long-term organic growth. We offer technical SEO, local SEO, content optimization, and authority building to help you dominate Google rankings at a budget that works for you.",
+			},
+			{
+				question:
+					"Are you a social media management company for UAE brands that you can outsource fully to?",
+				answer:
+					"Absolutely. We handle content, creatives, posting, engagement, and ads management end-to-end. Strategic content, reels, paid promotions, and community management — we build brand authority so you can focus on your business.",
+			},
+			{
+				question: "Can you manage Google Ads and Facebook Ads together?",
+				answer:
+					"Yes. Our digital marketing experts handle Google Ads management and work as a Facebook ads agency in Abu Dhabi & Dubai to ensure integrated paid campaigns. We run ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok campaigns designed for predictable lead flow.",
+			},
+			{
+				question: "Do you provide email marketing services?",
+				answer:
+					"Yes. As an email marketing company in UAE, we design automation sequences and campaigns to nurture and convert leads. We integrate smart CRM systems, email automation, and WhatsApp workflows that convert enquiries into customers automatically.",
+			},
+			{
+				question: "Do you create content for websites and blogs?",
+				answer:
+					"Yes. As a content marketing agency in Abu Dhabi & Dubai, we develop SEO-optimized content that ranks and converts. We create industry-specific content tailored to Real Estate, Healthcare, SaaS, Ecommerce, B2B, and more.",
+			},
+			{
+				question: "Do you run TikTok and Instagram ads?",
+				answer:
+					"Yes. We are a TikTok ads agency in Abu Dhabi & Dubai and Instagram marketing agency in UAE specializing in visual performance marketing. We create scroll-stopping campaigns that drive qualified traffic and leads for your brand.",
+			},
+			{
+				question: "Are your digital marketing packages affordable?",
+				answer:
+					"Yes. Our digital marketing packages in Abu Dhabi and Dubai are affordable for businesses that can start with minimal budgets. We offer flexible plans for startups, SMEs, and enterprise brands — all built around measurable ROI and clear KPIs.",
+			},
+		],
+	},
 ];
