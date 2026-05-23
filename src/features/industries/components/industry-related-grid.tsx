@@ -35,14 +35,14 @@ export function IndustryRelatedGrid({ currentSlug }: IndustryRelatedGridProps) {
 
 						return (
 							<Link
-								className="flex items-center gap-4 rounded-xl border bg-card p-4 transition-colors hover:bg-brand-50"
+								className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-brand-500 hover:shadow-sm"
 								href={`/industry/${slug}` as Route}
 								key={slug}
 							>
-								<div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600">
+								<div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600 transition-colors duration-300 group-hover:bg-brand-500 group-hover:text-white">
 									<IndustryIcon className="size-5" name={icon} />
 								</div>
-								<span className="font-medium text-primary text-sm">
+								<span className="font-medium text-foreground text-sm transition-colors group-hover:text-brand-600">
 									{label}
 								</span>
 							</Link>

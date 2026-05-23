@@ -15,6 +15,8 @@ export const INDUSTRY_SLUGS = [
 	"legal-consulting",
 	"manufacturing-industrial",
 	"events-entertainment",
+	"automotive",
+	"hospitality",
 ] as const;
 
 export type IndustrySlug = (typeof INDUSTRY_SLUGS)[number];

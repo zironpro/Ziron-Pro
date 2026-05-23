@@ -1,4 +1,5 @@
 import { Header } from "@/components/shared/header";
+import { Frame, FramePanel } from "@/components/ui/frame";
 
 import { IndustryCapabilityGrid } from "@/features/industries/components/industry-capability-grid";
 import { IndustryFaq } from "@/features/industries/components/industry-faq";
@@ -55,7 +56,11 @@ export function IndustryDetailPageView({
 					/>
 					<div className="dashed dashed-x container mx-auto max-w-7xl">
 						<div className="mx-auto max-w-3xl px-6 py-12 md:px-0">
-							<IndustryFaq items={frontmatter.faq} />
+							<Frame>
+								<FramePanel>
+									<IndustryFaq items={frontmatter.faq} />
+								</FramePanel>
+							</Frame>
 						</div>
 					</div>
 				</section>

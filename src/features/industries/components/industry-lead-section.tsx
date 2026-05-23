@@ -1,3 +1,11 @@
+import {
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
+import { Frame, FramePanel } from "@/components/ui/frame";
+
 import { IndustryLeadForm } from "./industry-lead-form";
 
 interface IndustryLeadSectionProps {
@@ -22,12 +30,26 @@ export function IndustryLeadSection({
 							tailored to your industry and market.
 						</p>
 					</div>
-					<IndustryLeadForm
-						formId="industry-lead-footer"
-						industrySlug={industrySlug}
-						industryTitle={industryTitle}
-						placement="page_footer"
-					/>
+					<div>
+						<Frame>
+							<FramePanel className="shadow-sm">
+								<CardHeader className="p-3 pb-0">
+									<CardTitle>Start your project today</CardTitle>
+									<CardDescription className="text-sm">
+										Tell us about your goals and we&apos;ll take it from there.
+									</CardDescription>
+								</CardHeader>
+								<CardContent className="p-3">
+									<IndustryLeadForm
+										formId="industry-lead-footer"
+										industrySlug={industrySlug}
+										industryTitle={industryTitle}
+										placement="page_footer"
+									/>
+								</CardContent>
+							</FramePanel>
+						</Frame>
+					</div>
 				</div>
 			</div>
 		</section>
