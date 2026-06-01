@@ -20,23 +20,23 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 		badgeLabel
 	) : (
 		<>
-			UAE&apos;s Digital Marketing Agency{" "}
-			<span className="text-brand-400">Driving Revenue Growth</span>
+			AI-Powered Digital Marketing & Growth Agency{" "}
+			<span className="text-brand-400">in Abu Dhabi & Dubai</span>
 		</>
 	);
 
-	const headingNode = heading ?? "Turn your brand into a revenue machine";
+	const headingNode = heading ?? "We Make Your Brand a Revenue Machine";
 
 	const subheadingNode = subheading ? (
 		subheading
 	) : (
 		<>
-			We’re your full-stack creative & digital marketing partner from{" "}
+			Partnering for Smart Growth & Measurable Business Success.{" "}
 			<span className="text-card">
-				branding to websites, CRM software, social media, printing, corporate
-				gifts,
+				Top Notch Marketing Solutions powered by strategy, creativity, AI, and
+				performance marketing.
 			</span>{" "}
-			and everything in between.
+			Serving startups, SMEs, and enterprise brands across the UAE.
 		</>
 	);
 

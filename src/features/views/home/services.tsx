@@ -29,8 +29,8 @@ export const Services = () => {
 				</p>
 			</header> */}
 			<Header
-				description="We help you achieve more at every stage of business growth."
-				title="Services"
+				description="Best Digital Marketing & CRM Company in Abu Dhabi, Dubai. From strategy to scale — we engineer integrated growth ecosystems that generate consistent revenue."
+				title="What We Do"
 			>
 				<div className="flex items-center gap-4 sm:justify-center">
 					<Button
@@ -75,8 +75,8 @@ export const Services = () => {
 							<h3 className="font-medium text-xl">Branding</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Strategic brand identities that build trust, recognition, and
-							loyalty helping e-commerce brands stand out.
+							Logo design, UI/UX, brand identity, video marketing, and visual
+							storytelling that elevate brand perception.
 						</p>
 					</div>
 					<Image
@@ -99,8 +99,8 @@ export const Services = () => {
 							<h3 className="font-medium text-xl">Web Design & Development</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Conversion-focused websites built for speed, clarity, and
-							scalability to consistently turn visitors into buyers.
+							High-converting, mobile-first, SEO-optimized websites built for
+							performance and user experience.
 						</p>
 					</div>
 					<Image
@@ -123,8 +123,8 @@ export const Services = () => {
 							<h3 className="font-medium text-xl">Digital Marketing</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Performance-driven ad campaigns built to scale e-commerce brands
-							profitably with a strong focus on ROAS.
+							ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok
+							campaigns designed for predictable lead flow.
 						</p>
 					</div>
 					<Image
@@ -149,8 +149,9 @@ export const Services = () => {
 							</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Scroll-stopping ad creatives engineered for performance and rapid
-							testing built to drive consistent sales.
+							NFC digital business cards for instant contact sharing, lead
+							capture, and CRM integration — perfect for UAE sales teams,
+							events, and exhibitions.
 						</p>
 					</div>
 					<Image
@@ -173,8 +174,8 @@ export const Services = () => {
 							<h3 className="font-medium text-xl">Motion Design & Video</h3>
 						</div>
 						<p className="text-muted-foreground">
-							High-impact explainer videos, brand films, and motion graphics
-							that bring your UAE brand story to life.
+							Strategic content, reels, paid promotions, and community
+							management to build brand authority.
 						</p>
 					</div>
 					<Image
@@ -197,8 +198,9 @@ export const Services = () => {
 							<h3 className="font-medium text-xl">Conversion optimization</h3>
 						</div>
 						<p className="text-muted-foreground">
-							We optimize funnels and user journeys to reduce friction and
-							convert more traffic into customers.
+							Smart CRM systems, lead tracking, pipeline management, email
+							automation, and WhatsApp workflows that convert enquiries into
+							customers automatically.
 						</p>
 					</div>
 					<Image
@@ -212,8 +214,8 @@ export const Services = () => {
 
 			<div className="dashed container max-w-7xl py-12 md:py-16 lg:py-20">
 				<h2 className="mb-6 text-center font-medium text-4xl">
-					Tailored services <br /> for every{" "}
-					<span className="text-primary">Brand.</span>
+					Tailored Services <br /> for Every{" "}
+					<span className="text-primary">Industry.</span>
 				</h2>
 
 				<ServicesCarousel />
@@ -229,14 +231,14 @@ export const Services = () => {
 			<div className="relative overflow-hidden bg-[radial-gradient(ellipse_at_bottom,var(--color-brand-950)_0%,#000_100%)]">
 				<div className="dashed dashed-b-0 container relative z-10 flex max-w-7xl flex-col items-center justify-center gap-6 py-12 md:flex-row">
 					<h4 className="text-center font-medium text-3xl text-muted">
-						Ready to take your business to the next level?
+						Ready to Grow Your Business Online?
 					</h4>
 					<Button
 						render={<Link className="gap-4" href="/contact" />}
 						size="xl"
 						variant="secondary"
 					>
-						Build your vision with us <IconArrowRightTag />
+						Book Your Free 30-Minute Growth Consultation <IconArrowRightTag />
 					</Button>
 				</div>
 				<StarsBackground

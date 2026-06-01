@@ -85,8 +85,8 @@ export const WhyUs = () => {
 	return (
 		<section className="dashed dashed-b-0 mx-auto max-w-7xl p-px">
 			<Header
-				description="Check out what Ziron pro offers vs employees and other agencies. It’s quite a lot!"
-				title="Why choose us"
+				description="We focus on business outcomes, not just marketing tasks. AI & automation integrated into every strategy for a full-funnel approach: Awareness → Leads → Sales → Retention."
+				title="What Makes ZironPro Different?"
 			/>
 			{/* <header className="dashed dashed-b space-y-1.5 p-9 text-center md:space-y-3 md:p-14">
 				<h2 className="font-display font-semibold text-3xl text-primary tracking-tight md:text-6xl">
